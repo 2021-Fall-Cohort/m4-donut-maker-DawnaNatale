@@ -1,0 +1,275 @@
+
+body{
+    background-color: #a0c4ff;
+    font-family: 'Permanent Marker';
+}
+
+nav{
+    display: flex;
+   overflow:scroll;
+    text-align: center;
+    padding:0px 0px;
+    border-bottom: 5px double #7209b7;
+    width: 100%;
+}
+
+nav .icon {
+    display: none;
+  }
+
+  .toggleBtnImg{
+      height: 30px;
+      width: 30px;
+      padding: 2px 2px;
+      border: 2px solid #caffbf;
+      background-color: #7209b7;
+      border-radius: 50%;
+      justify-self:flex-end;
+    }
+
+ul{
+    width: 100%;
+    justify-content: stretch;    
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+    height: 100%;
+}
+
+.fullItem{
+    display: block;
+    float: left;
+    width: 25%;
+    list-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.title{
+    color: #caffbf;
+    text-align: center;
+    font-size: 1.5rem;
+    text-shadow: 2px 1px rgba(72, 12, 168, 0.5);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 15px;
+}
+
+.collapsible {
+    background-color: #a0c4ff;
+    color: #caffbf;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    width:100%;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: rgba(72, 12, 168, 0.5);
+  }
+  
+  .nav-item {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgba(72, 12, 168, 0.5);
+    color: #FFAFCC;
+  }
+
+  #info{
+      text-align: center;
+      color: #caffbf;
+      padding: 18px;
+  }
+
+  #info:hover{
+      color: #FFC8DD;
+      opacity: 80%;
+      
+  }
+
+.gameBody{
+    display: flex;
+    margin-top: 2%;
+    align-items: center;
+}
+
+#donut{
+    display: flex;
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    margin-right: 10%;
+    margin-left: 20px;    
+    border-radius: 50%;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.donutBtnImg{
+    box-shadow:  0px 15px 30px rgba(0, 0, 0, .5);
+    border-radius: 50%;
+}
+
+#donut.bounce{
+    animation: bounce 1s linear;
+}
+
+@keyframes bounce {
+    20%, 50%, 80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 50%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 25px;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #caffbf;
+    color: #7209b7;
+    border: 5px solid #bdb2ff;
+}
+
+h2, h3{
+    color: #FFC8DD;
+     -webkit-text-stroke: 1px #FFAFCC;
+     margin-bottom: 1px;
+}
+
+#autoClicker{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+#autoClicker.spin{
+    animation: spin 1s linear;
+}
+
+@keyframes spin{
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#multiplierClicker{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#multiplierClicker.spin{
+    animation: spin 1s linear;
+}
+
+@keyframes spin{
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.donutsPerClick{
+    font-size: 1rem;
+}
+
+#autoCost{
+    font-weight: bold;
+}
+
+#multiplierCost{
+    font-weight: bold;
+}
+
+#reset{
+    width: 7rem;
+    height: 30px;
+    font-size: 0.75rem;
+    align-self: center;
+    margin-top: 10px;
+    color: #FFAFCC;
+    background-color: #7209b7;
+    border: 2px solid #FFAFCC;
+    font-family: 'Permanent Marker';
+}
+
+@media only screen and (max-width: 781px){
+    nav{
+        display: flex;
+        align-self: stretch;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    nav .title{
+        width: 500px;
+    }
+
+    nav .fullItem:not(:first-child) {display: none;}
+    nav .icon {
+    float:right;
+    display: block;
+  }
+
+ nav.responsive {
+     position: relative;
+     padding-bottom: 10px;
+    }
+
+  nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  nav.responsive .fullItem {
+    float: none;
+    display: inline;
+  }
+  
+
+    .gameBody{
+        display: block;
+        justify-content: center;
+    }
+    .container{
+        width: 80%;
+        max-height: 80vh;
+        margin: auto auto;
+        margin-bottom: 10px;
+    }
+    #donut{
+        margin: auto auto;
+        padding-top: 10px;
+        height:8rem;
+        width: 8rem;
+    }
+  }

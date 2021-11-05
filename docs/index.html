@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawna's Donut Maker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+</head>
+
+<body>
+
+    <nav class="topNav" id="myTopNav">
+        <ul>
+            <li class="fullItem">
+                <p class="title">Welcome to Donut Maker</p>
+            </li>
+            <li class="fullItem"><button type="button" class="collapsible">About Fred the Baker Baking Company</button>
+                <div class="nav-item">
+                    <p>Fred the Baker is tired of making real donuts and is ready to retire. He needs our help to keep
+                        his love of donuts alive! Click the giant donut below to make donuts and be sure to use the
+                        auto-clicker and multiplier functions to increase donut making speed!</p>
+                </div>
+            </li>
+
+            <li class="fullItem"> <button type="button" class="collapsible">About the Developer</button>
+                <div class="nav-item">
+                    <p>Dawna Natale is a Software Developer currently enrolled in a bootcamp through WeCanCodeIT. She
+                        has been coding for about two years, having learned C#, .NET, html, css, and javascript
+                        including NodeJS.</p>
+                </div>
+            </li>
+
+            <li class="fullItem">
+                <a id="info" href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Our Inspo</a>
+            </li>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i><img src="/src/css/images/doughnut.png" class="toggleBtnImg" alt=""></i>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="gameBody">
+        <div class="container">
+            <div class="donutCount">
+                <h2>Donut Count: <span id="donutSpan"></span></h2>
+            </div>
+            <div class="autoClicker">
+                <span>Purchase an auto clicker!<img src="../src/css/images/doughnut.png" id="autoClicker"
+                        class="toggleButton"></img></span>
+                <div>Auto-Clickers Purchased: <span id="autoSpan"></span></div>
+            </div>
+            <div class="multiplierClicker">
+                <span>Purchase a Multiplier!<img src="../src/css/images/doughnut.png" id="multiplierClicker"
+                        class="toggleButton"></img></span>
+                <div>Multipliers Purchased: <span id="multiplierSpan"></span></div>
+                <div class="donutsPerClick">
+                    (donuts earned per click: <span id="donutsPerClick">0</span>)
+                </div>
+            </div>
+            <div>
+                <h3>Costs:</h3>
+            </div>
+            <div>Auto-Clicker Cost: <span id=autoCost></span> donuts</div>
+            <div>Multiplier Cost: <span id=multiplierCost></span> donuts</div>
+            <button id="reset">Reset Game</button>
+        </div>
+
+
+        <div id="donut" class="toggleButton" value="play">
+            <img class="donutBtnImg" src="/src/css/images/doughnut.png" alt="">
+        </div>
+
+        <audio id="quickAudioContainer" hidden>
+            <source src="/src/css/sounds/mixkit-quick-jump-arcade-game-239.wav" type="audio/mpeg">
+        </audio>
+        <audio id="errorAudioContainer" hidden>
+            <source src="/src/css/sounds/mixkit-electric-buzz-glitch-2594.wav" type="audio/mpeg">
+        </audio>
+        <audio id="successAudioContainer" hidden>
+            <source src="/src/css/sounds/mixkit-fantasy-game-success-notification-270.wav" type="audio/mpeg">
+        </audio>
+        <audio id="restartAudioContainer" hidden>
+            <source src="/src/css/sounds/mixkit-fairy-glitter-867.wav" type="audio/mpeg">
+        </audio>
+    </div>
+
+
+
+
+
+    <script src="../src/js/donutmaker.js"></script>
+    <script src="../src/js/app.js"></script>
+</body>
+
+</html>
